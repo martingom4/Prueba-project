@@ -1,19 +1,15 @@
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import LoginView from './views/LoginView'
-import AuthLayout from './components/AuthLayouts'
-import './Index.css'
-import HeaderLayout from './components/HeaderLayout'
 
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import './Index.css'
+import HomeLayout from './loyouts/HomeLayout'
+import Home from './views/Home'
 
 
 export default function Router(){
     return (<BrowserRouter>
         <Routes>
-            <Route element={<AuthLayout />}>
-                <Route path="/auth/login" element={<LoginView />} />
-            </Route>
-            <Route element={<HeaderLayout />}>
-                <Route path='/auth/login' element = {<LoginView/>}></Route>
+            <Route element={<HomeLayout />}>
+                <Route path='/' element = {<Home/>}></Route>
             </Route>
         </Routes>
     </BrowserRouter>
