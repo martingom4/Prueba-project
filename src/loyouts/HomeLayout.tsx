@@ -4,6 +4,7 @@ import { Toaster } from "sonner"
 import Footer from "../components/Footer.tsx"
 import Header from "../components/Header.tsx"
 
+
 export default function HomeLayout(){
     return(
         <>
