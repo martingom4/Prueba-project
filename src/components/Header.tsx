@@ -1,33 +1,36 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-
+// en vez de el home se tiene que dejar poner en el component de la imagen o logo
 const links = [
     { name: "Home", href: "/"},
     { name: "Ordena Online", href: "#"},
     { name: "Productos", href: "#"},
     { name: "Contacto", href: "#"},
-    { name: "Location", href: "#"},
+    { name: "Localizacion", href: "#"},
     { name: "Sobre Nosotros", href: "#"},
 ];
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+
+
     return (
         <header className="bg-gray-900 text-white p-4">
-            <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo alineado */}
                 <div className="flex items-center pl-4">
                     <img
                         src="https://i.pinimg.com/550x/24/66/31/246631bd1587502733043b5840419310.jpg"
                         alt="Logo"
-                        className="h-12 w-auto flex-shrink-0 ml-[-10px]"
+                        className="h-12 w-auto flex-shrink-0 mr-32"
                     />
                 </div>
 
 
                 {/* Menú en escritorio */}
-                <nav className="hidden md:flex flex-1 justify-center gap-12">
+
+                <nav className="hidden md:flex flex-1 justify-start space-x-18">
                     {links.map((link) => (
                         <Link
                             to={link.href}
