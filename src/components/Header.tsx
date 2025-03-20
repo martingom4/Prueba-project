@@ -1,59 +1,56 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import  { ShoppingCartIcon} from "@heroicons/react/20/solid";
+import UiShopingCart from "./Ui/UiShopingCart";
+import UiLogo from "./Ui/UiLogo";
+
 // en vez de el home se tiene que dejar poner en el component de la imagen o logo
 const links = [
-    { name: "Home", href: "/"},
+    { name: "Inicio", href: "/"},
     { name: "Ordena Online", href: "#"},
     { name: "Productos", href: "#"},
     { name: "Contacto", href: "#"},
-    { name: "Localizacion", href: "#"},
-    { name: "Sobre Nosotros", href: "#"},
+    { name: "Localización", href: "#"},
+    { name: "Sobre Nosotros", href: "#"}
 ];
+
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-
-
-
     return (
-        <header className="bg-gray-900 text-white p-4">
+        <header className=" bg-gray-900 text-white p-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                {/* Logo alineado */}
-                <div className="flex items-center pl-4">
-                    <img
-                        src="https://i.pinimg.com/550x/24/66/31/246631bd1587502733043b5840419310.jpg"
-                        alt="Logo"
-                        className="h-12 w-auto flex-shrink-0 mr-32"
-                    />
-                </div>
+                {/* Logo */}
+                <UiLogo/>
 
-
-                {/* Menú en escritorio */}
-
+                {/* Menú de navegacion  */}
                 <nav className="hidden md:flex flex-1 justify-start space-x-18">
                     {links.map((link) => (
                         <Link
                             to={link.href}
                             key={link.name}
-                            className="relative text-white transition-all duration-300 ease-out hover:scale-110 hover:text-yellow-200 hover:opacity-80"
+                            className="relative hover-effect"
                         >
                             {link.name}
                         </Link>
                     ))}
                 </nav>
 
+                 {/* icono de el carrito  */}
+                 <UiShopingCart/>
+
                 {/* Botón menú móvil */}
                 <button
-                    className="md:hidden text-white focus:outline-none"
+                    className="md:hidden text-white focus:outline-none ml-2"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
-                    {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                    {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
                 </button>
             </div>
 
             {/* Menú desplegable en móviles */}
             {menuOpen && (
-                <div className="md:hidden flex flex-col items-center bg-gray-800 py-4">
+                <div className="md:hidden flex flex-col items-center bg-gray-900 py-4">
                     {links.map((link) => (
                         <Link
                             to={link.href}

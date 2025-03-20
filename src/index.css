@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@layer components {
+  .hover-effect {
+    @apply text-white transition-all duration-300 ease-out hover:scale-110 hover:text-yellow-200 hover:opacity-80;
+  }
+}
+
+

@@ -1,6 +1,6 @@
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import './Index.css'
+import './index.css'
 import HomeLayout from './loyouts/HomeLayout'
 import Home from './views/Home'
 
