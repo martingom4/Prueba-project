@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import  { ShoppingCartIcon} from "@heroicons/react/20/solid";
 import UiShopingCart from "./Ui/UiShopingCart";
 import UiLogo from "./Ui/UiLogo";
 
