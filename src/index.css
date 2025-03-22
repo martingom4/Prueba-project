@@ -6,4 +6,10 @@
   }
 }
 
-
+:theme {
+  --color-primary-red: #a12311;
+  --color-primary-yellow: #fef6c9;
+  --color-secundary-blue: #78a1bb;
+  --color-secundary-black: #0f1a20;
+  --color-secundry-gray: #978fa0 ;
+}

@@ -17,50 +17,50 @@ const links = [
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <header className=" bg-gray-900 text-white p-4">
+        <header className="bg-amber-200 text-white p-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                {/* Logo */}
-                <UiLogo/>
+            {/* Logo */}
+            <UiLogo/>
 
-                {/* Menú de navegacion  */}
-                <nav className="hidden md:flex flex-1 justify-start space-x-18">
-                    {links.map((link) => (
-                        <Link
-                            to={link.href}
-                            key={link.name}
-                            className="relative hover-effect"
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                </nav>
-
-                 {/* icono de el carrito  */}
-                 <UiShopingCart/>
-
-                {/* Botón menú móvil */}
-                <button
-                    className="md:hidden text-white focus:outline-none ml-2"
-                    onClick={() => setMenuOpen(!menuOpen)}
+            {/* Menú de navegacion  */}
+            <nav className="hidden md:flex flex-1 justify-start space-x-18">
+                {links.map((link) => (
+                <Link
+                    to={link.href}
+                    key={link.name}
+                    className="relative hover-effect"
                 >
-                    {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
-                </button>
+                    {link.name}
+                </Link>
+                ))}
+            </nav>
+
+             {/* icono de el carrito  */}
+             <UiShopingCart/>
+
+            {/* Botón menú móvil */}
+            <button
+                className="md:hidden text-white focus:outline-none ml-2"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
+            </button>
             </div>
 
             {/* Menú desplegable en móviles */}
             {menuOpen && (
-                <div className="md:hidden flex flex-col items-center bg-gray-900 py-4">
-                    {links.map((link) => (
-                        <Link
-                            to={link.href}
-                            key={link.name}
-                            className="py-2 text-white text-lg transition-all duration-300 ease-out hover:scale-110 hover:text-yellow-200 hover:opacity-80"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                </div>
+            <div className="md:hidden flex flex-col items-center bg-[color:var(--color-secundary-black)] py-4">
+                {links.map((link) => (
+                <Link
+                    to={link.href}
+                    key={link.name}
+                    className="py-2 text-white text-lg hover-effect"
+                    onClick={() => setMenuOpen(false)}
+                >
+                    {link.name}
+                </Link>
+                ))}
+            </div>
             )}
         </header>
     );
