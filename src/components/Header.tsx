@@ -17,7 +17,7 @@ const links = [
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <header className=" bg-secundary-blue text-white p-4">
+        <header className=" bg-primary-red text-white p-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Logo */}
             <UiLogo/>

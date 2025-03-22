@@ -9,7 +9,7 @@ export default function HomeLayout(){
     return(
         <>
             <Header/>
-            <div className=' bg-slate-800 min-h-screen'>
+            <div className=' bg-primary-yellow min-h-screen'>
                 <div className='py-10 text-center'>
                     <Outlet/>
                 </div>

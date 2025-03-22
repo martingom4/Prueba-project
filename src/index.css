@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 @theme {
+
+
+  
   --color-primary-red: #a12311;
   --color-primary-yellow: #fef6c9;
   --color-secundary-blue: #78a1bb;
   --color-secundary-black: #0f1a20;
   --color-secundary-gray: #978fa0 ;
   --color-secundary-white: #f7f7f7;
-  --color-mint-500: oklch(0.72 0.11 178);
+
 }
 
 @layer components {
