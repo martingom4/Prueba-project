@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
+:theme {
+  --color-primero-red: #a12311;
+  --color-primary-yellow: #fef6c9;
+  --color-secundary-blue: #78a1bb;
+  --color-secundary-black: #0f1a20;
+  --color-secundary-gray: #978fa0 ;
+  --color-secundary-white: #f7f7f7;
+}
+
 @layer components {
   .hover-effect {
     @apply text-white transition-all duration-300 ease-out hover:scale-110 hover:text-yellow-200 hover:opacity-80;
   }
 }
 
-:theme {
-  --color-primary-red: #a12311;
-  --color-primary-yellow: #fef6c9;
-  --color-secundary-blue: #78a1bb;
-  --color-secundary-black: #0f1a20;
-  --color-secundry-gray: #978fa0 ;
-}
+
