@@ -17,7 +17,7 @@ const links = [
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <header className=" bg-primary-red text-white p-4">
+        <header className=" bg-primary-red shadow-md text-secundary-white p-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Logo */}
             <UiLogo/>
@@ -40,7 +40,7 @@ export default function Header() {
 
             {/* Botón menú móvil */}
             <button
-                className="md:hidden text-white focus:outline-none ml-2"
+                className="md:hidden text-secundary-white focus:outline-none ml-2"
                 onClick={() => setMenuOpen(!menuOpen)}
             >
                 {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
@@ -49,7 +49,7 @@ export default function Header() {
 
             {/* Menú desplegable en móviles */}
             {menuOpen && (
-            <div className="md:hidden flex flex-col items-center bg-[color:var(--color-secundary-black)] py-4">
+            <div className="md:hidden flex flex-col items-center bg-primary-red py-4">
                 {links.map((link) => (
                 <Link
                     to={link.href}
