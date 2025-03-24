@@ -20,6 +20,7 @@ export default function Header() {
         <header className=" bg-primary-red shadow-md text-secundary-white p-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Logo */}
+            
             <UiLogo/>
 
             {/* Menú de navegacion  */}
