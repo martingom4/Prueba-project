@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { Toaster } from "sonner"
+import { Toaster } from "sonner" // esto es para las notificaciones 
 
 
 import Footer from "../components/Footer.tsx"

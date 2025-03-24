@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import UiShopingCart from "./Ui/UiShopingCart";
 import UiLogo from "./Ui/UiLogo";
 
 // en vez de el home se tiene que dejar poner en el component de la imagen o logo
@@ -20,7 +19,7 @@ export default function Header() {
         <header className=" bg-primary-red shadow-md text-secundary-white p-4">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Logo */}
-            
+
             <UiLogo/>
 
             {/* Menú de navegacion  */}
@@ -36,8 +35,6 @@ export default function Header() {
                 ))}
             </nav>
 
-             {/* icono de el carrito  */}
-             <UiShopingCart/>
 
             {/* Botón menú móvil */}
             <button
