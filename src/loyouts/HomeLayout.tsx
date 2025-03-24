@@ -11,7 +11,7 @@ export default function HomeLayout(){
     return(
         <>
             <Header/>
-            <div className=' bg-primary-yellow min-h-screen'>
+            <div className=' bg-gradient-to-b from-primary-red to-primary-yellow min-h-screen'>
                 <div className='py-10 text-center'>
                     <Outlet/>
                 </div>
