@@ -16,7 +16,7 @@ const links = [
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <header className=" bg-primary-red shadow-md text-secundary-white p-4">
+        <header className=" bg-primary-red shadow-md text-secundary-white p-6 ">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Logo */}
 
